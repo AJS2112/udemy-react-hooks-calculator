@@ -29,8 +29,28 @@ function CalculatorService() {
         return result;
     }
 
+    function concatNumber(currentNumber, concatenatedNumber) {
+        //caso contenha apenas '0' ou null, reinicia o valor
+        if (currentNumber === '0' || currentNumber === null) {
+            currentNumber = '';
+        }
+
+        // primeiro digito for '.', concatena '0' antes do ponto
+        if (concatenatedNumber === '.' && currentNumber === '') {
+            return '0.';
+        }
+
+        // caso '.' digitado e já contenha um ponto, apenas retornar
+        if (concatenatedNumber === '.' && currentNumber.indexOf('.') > -1) {
+            return currentNumber;
+        }
+
+        return currentNumber + concatenatedNumber;
+    }
+
     return [
         calculate,
+        concatNumber,
         SUM,
         SUB,
         MUL,

@@ -4,7 +4,7 @@ import CalculatorService from './calculator.service';
 
 describe('Teste do CalculatorService', () => {
 
-    const [calculate, SUM, SUB, MUL, DIV] = CalculatorService();
+    const [calculate, concatNumber, SUM, SUB, MUL, DIV] = CalculatorService();
 
     it('deve garantir que 1 + 4 = 5.', () => {
         let sum = calculate(1, 4, SUM);
