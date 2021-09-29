@@ -80,7 +80,8 @@ function Calculator() {
               name="txtNumber"
               className="text-right"
               readOnly="readonly"
-              value={txtNumbers} />
+              value={txtNumbers}
+              data-testid="txtNumbers" />
           </Col>
         </Row>
 
@@ -95,7 +96,7 @@ function Calculator() {
             <Button variant="light" onClick={() => addNumber('9')}>9</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => defineOperation('/')}>/</Button>
+            <Button variant="warning" onClick={() => defineOperation(DIV)}>/</Button>
           </Col>
         </Row>
 
@@ -110,7 +111,7 @@ function Calculator() {
             <Button variant="light" onClick={() => addNumber('6')}>6</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => defineOperation('*')}>*</Button>
+            <Button variant="warning" onClick={() => defineOperation(MUL)}>*</Button>
           </Col>
         </Row>
 
@@ -125,7 +126,7 @@ function Calculator() {
             <Button variant="light" onClick={() => addNumber('3')}>3</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => defineOperation('-')}>-</Button>
+            <Button variant="warning" onClick={() => defineOperation(SUB)}>-</Button>
           </Col>
         </Row>
 
@@ -140,7 +141,7 @@ function Calculator() {
             <Button variant="success" onClick={calculateAction}>=</Button>
           </Col>
           <Col>
-            <Button variant="warning" onClick={() => defineOperation('+')}>+</Button>
+            <Button variant="warning" onClick={() => defineOperation(SUM)}>+</Button>
           </Col>
         </Row>
       </Container>
